@@ -1,4 +1,4 @@
-# Учебная сборка Loftschool
+# Учебная сборка Loftschool - Вейт Александра
 
 > Сборка работает на gulp версии 4.0. 
 
@@ -10,5 +10,8 @@
 > Установка последней версии Gulp CLI tools глобально (подробнее - [GitHub](https://github.com/gulpjs/gulp/blob/4.0/docs/getting-started.md) )
 
 4. ```npm install```
-6. ```run gulp``` 
+5. ```run gulp``` 
 
+### Добавлены gulp-таски:
+1) sprite.js - генерация спрайтов из png
+2) copy.fonts.js - копирование шрифтов из исходников в продакшн
