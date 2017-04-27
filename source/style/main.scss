@@ -1,0 +1,15 @@
+$white : #efeee9;
+$beige: #eeebdf;
+$main-font-color : #373e42;
+
+//layout: setups, fonts
+@import "layout/setups";
+@import "layout/fonts";
+@import "layout/font-awesome";
+
+//helpers: mixins, sprite
+@import "helpers/mixins";
+@import "helpers/sprite";
+
+// blocks
+@import "blocks/socials";

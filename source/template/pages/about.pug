@@ -1,0 +1,90 @@
+extends ../layout
+
+block title
+	| Обо мне
+
+block content
+	include ../sections/hero
+
+	section.section.about
+		.about__left
+			svg(
+				viewbox="0 0 1000 100"
+				preserveAspectRatio="none"
+				class="triangle triangle_fill_white about__triangles")
+				polygon(points="0,0 0,100 1000,100")
+			+title('Обо мне', 'about_header.svg', 'about__section-title')
+			.user-about
+				.user-about__picture
+					img(src="assets/img/content/user.png", alt="user").user-about__picture-avatar
+				.user-about__title
+					.subtitle
+						| Кто я
+				.user-about__text
+					p 
+						| Я веб разработчик из Москвы. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+					p
+						| Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
+		
+		.about__right
+			svg(
+				viewbox="0 0 1000 100"
+				preserveAspectRatio="none"
+				class="triangle triangle_fill_beige about__triangles")
+				polygon(points="0,100 1000,100 1000,0")
+			.about-data
+				.about-data__desc.about-user-info
+					.about-user-info__title
+						.subtitle
+							| Чем я могу быть полезна
+					.about-user-info__text
+						p
+							| Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+				.about-data__content
+					ul.skills
+						each skill in ['Frontend', 'Backend', 'WorkFlow']
+							li.skills__item
+								.skill-section
+									.skill-section__title= skill
+									ul.skill-section__list
+										each skillName in ['HTML', 'CSS', 'JavaScript & jQuery']
+											li.skills-section__item
+												.skill
+													svg.skill__circle
+													.skill__name= skillName
+
+	section.section.map
+		.map__bg
+			img(src="assets/img/bg/bg-map.jpg", alt="bg-map").map__bg-img
+
+		.user-contacts
+			.user-contacts__title
+				.subtitle
+					| Контакты
+			ul.user-contacts__list
+				li.user-contacts__item.item__skype
+					svg.icons.user-contacts__item-icon.icon__skype
+						use(xlink:href='assets/img/sprite.svg#skype')
+					a(href="skype:sashulya90").user-contacts__item-link.link__skype
+						| sashulya90
+				li.user-contacts__item.item__email
+					svg.icons.user-contacts__item-icon.icon__email
+						use(xlink:href='assets/img/sprite.svg#envelope')
+					a(href="mailto:alexandra.pasyuta@gmail.com").user-contacts__item-link.link__email
+						| alexandra.pasyuta@gmail.com
+				li.user-contacts__item.item__phone
+					svg.icons.user-contacts__item-icon.icon__phone
+						use(xlink:href='assets/img/sprite.svg#phone')
+					a(href="+7 903 511 20 22").user-contacts__item-link.link__phone
+						| +7 903 511 20 22
+				li.user-contacts__item.item__adress
+					svg.icons.user-contacts__item-icon.icon__adress
+						use(xlink:href='assets/img/sprite.svg#map_marker')
+					a(href="https://goo.gl/maps/4dPmCV2idMH2").user-contacts__item-link.link__adress
+						| г. Москва, м. Пионерская
+		.city
+			.city-name
+				| Москва
+
+block footer
+	include ../sections/footer
