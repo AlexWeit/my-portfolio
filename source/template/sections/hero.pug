@@ -2,36 +2,36 @@ section.section.hero
 	.hero__bg
 			img(src="assets/img/bg/bg-mountain-mask.jpg", alt="bg-mountain-mask").hero__bg-img
 
-	container.container_header.clearfix
-		ul.socials.socials_header
-			-
-				icons = ['vk', 'gh', 'in'];
-			each icon in icons
-				li.socials__item
-					a(href="#").socials__link
-						svg.icons.icons__socials.icons__socials_white
-							use(xlink:href=`assets/img/sprite.svg#${icon}`)
-	
-		a(href="#").hamburger
-			svg.icons.icon__hamburger
-				use(xlink:href='assets/img/sprite.svg#hamburger')
+	.container-hero
+		header.container_header
+			ul.socials.socials_header
+				-
+					icons = ['vk', 'gh', 'in'];
+				each icon in icons
+					li.socials__item
+						a(href="#").socials__link
+							svg.icons.icons__socials.icons__socials_white
+								use(xlink:href=`assets/img/sprite.svg#${icon}`)
+		
+			a(href="#").hamburger
+				svg.icons.icon__hamburger
+					use(xlink:href='assets/img/sprite.svg#hamburger')
 
-		//-
-			i(class="fa fa-bars fa-2x" aria-hidden="true")	
-				
+			//-
+				i(class="fa fa-bars fa-2x" aria-hidden="true")	
+					
+		.hero__title
+			img(src="assets/img/decor/portfolio_header.svg" alt="portfolio_header").section-title
+			.user.hero__user-block
+				.user__photo
+					.user__photo-avatar
+						img(src="assets/img/content/user.png", alt="user-avatar").user__photo-img
+				.user__name Александра Вейт
+				.user__desc Личный сайт веб-разработчика
 
-	.hero__title
-		img(src="assets/img/decor/portfolio_header.svg" alt="portfolio_header").section-title
-		.user.hero__user-block
-			.user__photo
-				.user__photo-avatar
-					img(src="assets/img/content/user.png", alt="user-avatar").user__photo-img
-			.user__name Александра Вейт
-			.user__desc Личный сайт веб-разработчика
+		a(href="#").arrow-down
+			svg.icons.icon__arrow-down
+				use(xlink:href='assets/img/sprite.svg#arrow_down')
 
-	a(href="#").arrow-down
-		svg.icons.icon__arrow-down
-			use(xlink:href='assets/img/sprite.svg#arrow_down')
-
-		//-
-			i(class="fa fa-chevron-down fa-2x" aria-hidden="true")
+			//-
+				i(class="fa fa-chevron-down fa-2x" aria-hidden="true")

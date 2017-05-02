@@ -1,0 +1,17 @@
+.about__triangles {
+	display: block;
+	width: 100%;
+	height: 110px;
+	position: absolute;
+	bottom: 100%;
+}
+
+.triangle_fill_white {
+	fill: $darkWhite;
+	left: 0;
+}
+
+.triangle_fill_beige {
+	fill: $beige;
+	right: 0;
+}

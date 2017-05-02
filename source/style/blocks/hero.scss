@@ -1,0 +1,97 @@
+.hero {
+	height: 600px;
+	overflow: hidden;
+	position: relative;
+}
+
+.hero__bg {
+	top: 0;
+	width: 100%;
+    max-height: 620px;
+	@include centered(x);
+}
+
+.container-hero {
+	position: relative;
+}
+
+.container_header {
+	@extend %clearfix;
+	margin: 30px 0 0;
+    padding: 0 30px;
+
+	.socials_header {
+	float: left;
+	}
+
+	.hamburger {
+	float: right;
+	}
+
+	.icon__hamburger {
+	fill: $lightBlue;
+
+		&:hover {
+		fill: $white;
+		}
+	}
+}
+
+.hero__title {
+	margin-top: 80px;
+	position: relative;
+}
+
+.section-title {
+	position: absolute;
+	opacity: 0.1;
+}
+
+.user {
+	@include centered(x);
+	position: relative;
+	color: $white;
+}
+
+.user__photo {
+	width: 140px;
+	margin: auto;
+}
+
+.user__photo-avatar {
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.user__photo-img {
+	width: 100%;
+}
+
+.user__name {
+	text-align: center;
+	font-size: 35px;
+	font-family: "robotomedium";
+}
+
+.user__desc {
+	text-align: center;
+	font-size: 16px;
+	font-family: "robotolight";
+}
+
+.arrow-down {
+	display: block;
+    margin-top: 130px;
+}
+
+.icon__arrow-down {
+	@include centered(x);
+	position: relative;
+	fill: $lightBlue;
+
+	&:hover {
+		fill: $white;
+	}
+}

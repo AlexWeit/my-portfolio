@@ -1,0 +1,38 @@
+.user-contacts {
+	@include centered(y);
+	position: relative;
+	background: rgba(229, 247, 244, 0.8);
+	width: 380px;
+	margin: auto;
+	min-height: 290px;
+}
+
+.user-contacts__title {
+	padding: 15px 0;
+}
+
+.user-contacts__list {
+	width: 290px;
+	margin: auto;
+}
+
+.user-contacts__item {
+	position: relative;
+    margin-top: 25px;
+    min-height: 25px;
+
+    &:first-child {
+    	margin-top: 0;
+    }
+}
+
+.user-contacts__item-icon {
+	fill: $green;
+	position: absolute;
+}
+
+.user-contacts__item-link {
+	margin-left: 40px;
+    @include centered(y);
+    color: $grayText;
+}

@@ -1,0 +1,98 @@
+.about {
+	@extend %clearfix;
+	position: relative;
+}
+
+.about__col {
+	float: left;
+	width: 50%;
+	min-height: 1000px;
+	position: relative;
+
+	&_left {
+		background: $darkWhite;
+	}
+
+	&_right {
+		background: $beige;
+	}
+}
+
+
+//triangles
+
+
+
+//left
+
+.about__col-content {
+	padding: 0 10%;
+	@extend %clearfix;
+}
+
+.about__section-title {
+	//float: left;
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 63px;
+	font-family: "bernier_regularregular";
+	color: $grayTitle;
+	background-size: 100% 100%;
+}
+
+.user-about__picture {
+	margin-bottom: 35px;
+	text-align: center;
+
+	img {
+		display: inline-block;
+		max-width: 100%;
+	}
+}
+
+.subtitle {
+	text-align: center;
+	font-size: 35px;
+	font-family: "bernier_regularregular";
+	color: $grayTitle;
+}
+
+.user-about__text {
+	font-size: 16px;
+	color: $grayText;
+
+	p {
+		margin-bottom: 20px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+//right
+.about-data {
+	padding: 10px 6% 0 6%;
+}
+
+.about-user-info__text {
+	font-size: 16px;
+	color: $grayText;
+
+	p {
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+}
+
+
+//skills
+
+
+//skill
+
+//map
+
+
+
+//contacts

@@ -7,26 +7,29 @@ block content
 	include ../sections/hero
 
 	section.section.about
-		.about__left
+		.about__col.about__col_left
 			svg(
 				viewbox="0 0 1000 100"
 				preserveAspectRatio="none"
 				class="triangle triangle_fill_white about__triangles")
 				polygon(points="0,0 0,100 1000,100")
-			+title('Обо мне', 'about_header.svg', 'about__section-title')
-			.user-about
-				.user-about__picture
-					img(src="assets/img/content/user.png", alt="user").user-about__picture-avatar
-				.user-about__title
-					.subtitle
-						| Кто я
-				.user-about__text
-					p 
-						| Я веб разработчик из Москвы. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-					p
-						| Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
+			.about__col-content
+				+title('Обо мне', 'about_header.svg', 'about__section-title')
+				.user-about
+					.user-about__picture
+						img(src="assets/img/content/user.png", alt="user").user-about__picture-avatar
+					.user-about__title
+						.subtitle
+							+line
+							span Кто я
+							+line
+					.user-about__text
+						p 
+							| Я веб разработчик из Москвы. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+						p
+							| Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
 		
-		.about__right
+		.about__col.about__col_right
 			svg(
 				viewbox="0 0 1000 100"
 				preserveAspectRatio="none"
@@ -41,50 +44,30 @@ block content
 						p
 							| Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
 				.about-data__content
-					ul.skills
-						each skill in ['Frontend', 'Backend', 'WorkFlow']
-							li.skills__item
-								.skill-section
-									.skill-section__title= skill
-									ul.skill-section__list
-										each skillName in ['HTML', 'CSS', 'JavaScript & jQuery']
-											li.skills-section__item
+					ul.skills-group
+						each skillGroup in ['Frontend', 'Backend', 'WorkFlow']
+							li.skills-group__item
+								.skills-group__section
+									.skills-group__title= skillGroup
+									ul.skills-list
+										- for (var i = 0; i < 4; i++)
+											li.skills-list__item
 												.skill
-													svg.skill__circle
-													.skill__name= skillName
+													svg(viewbox="0 0 100 100" preserveAspectRatio="none").skill__circle
+														circle(cx="50" cy="50" r="40").skills__circle-under
+														circle(cx="50" cy="50" r="40").skills__circle-above
+													- var skillsFrontend = ['HTML5', 'CSS3', 'JavaScript & jQuery']
+													- var skillsBackend = ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
+													- var skillsWorkflow = ['Git', 'Gulp', 'Bower']
+													if skillGroup=='Frontend'
+														.skill__title=skillsFrontend[i]
+													else if skillGroup=='Backend'
+														.skill__title=skillsBackend[i]
+													else if skillGroup=='WorkFlow'
+														.skill__title=skillsWorkflow[i]
+													
 
-	section.section.map
-		.map__bg
-			img(src="assets/img/bg/bg-map.jpg", alt="bg-map").map__bg-img
-
-		.user-contacts
-			.user-contacts__title
-				.subtitle
-					| Контакты
-			ul.user-contacts__list
-				li.user-contacts__item.item__skype
-					svg.icons.user-contacts__item-icon.icon__skype
-						use(xlink:href='assets/img/sprite.svg#skype')
-					a(href="skype:sashulya90").user-contacts__item-link.link__skype
-						| sashulya90
-				li.user-contacts__item.item__email
-					svg.icons.user-contacts__item-icon.icon__email
-						use(xlink:href='assets/img/sprite.svg#envelope')
-					a(href="mailto:alexandra.pasyuta@gmail.com").user-contacts__item-link.link__email
-						| alexandra.pasyuta@gmail.com
-				li.user-contacts__item.item__phone
-					svg.icons.user-contacts__item-icon.icon__phone
-						use(xlink:href='assets/img/sprite.svg#phone')
-					a(href="+7 903 511 20 22").user-contacts__item-link.link__phone
-						| +7 903 511 20 22
-				li.user-contacts__item.item__adress
-					svg.icons.user-contacts__item-icon.icon__adress
-						use(xlink:href='assets/img/sprite.svg#map_marker')
-					a(href="https://goo.gl/maps/4dPmCV2idMH2").user-contacts__item-link.link__adress
-						| г. Москва, м. Пионерская
-		.city
-			.city-name
-				| Москва
+	include ../sections/map
 
 block footer
 	include ../sections/footer

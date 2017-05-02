@@ -1,0 +1,48 @@
+.footer {
+	position: absolute;
+	background: rgba(69, 90, 100, 0.8);
+	$height: 147px;
+	min-height: $height;
+	margin-top: -$height;
+	width: 100%;
+	color: $darkWhite;
+}
+
+.footer__row {
+	@extend %clearfix;
+	border-bottom: 1px solid rgba($white, 0.1);
+	padding: 0 30px;
+	position: relative;
+	min-height: 73px;
+
+	&_bottom {
+		font-family: "robotolight";
+	}
+}
+
+.footer__left, .footer__right {
+	float: left;
+	width: 50%;
+	margin: 20px 0;
+}
+
+.footer__right {
+	text-align: right;
+}
+
+.nav-menu__item {
+	display: inline-block;
+	margin-left: 40px;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.nav-menu__link {
+	color: $darkWhite;
+
+	&:hover {
+		color: $white;
+	}
+}
