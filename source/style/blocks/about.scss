@@ -38,15 +38,17 @@
 	font-family: "bernier_regularregular";
 	color: $grayTitle;
 	background-size: 100% 100%;
+	@extend %titleDecor;
 }
 
 .user-about__picture {
 	margin-bottom: 35px;
 	text-align: center;
+	width: 100%;
 
 	img {
 		display: inline-block;
-		max-width: 100%;
+		width: 100%;
 	}
 }
 
@@ -55,6 +57,7 @@
 	font-size: 35px;
 	font-family: "bernier_regularregular";
 	color: $grayTitle;
+	@extend %titleDecor;
 }
 
 .user-about__text {

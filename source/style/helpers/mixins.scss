@@ -25,3 +25,18 @@
     clear: both;
   }
 }
+
+%titleDecor {
+  &::before, &::after {
+      content: "—";
+      color: #c3c4c0;
+    }
+
+    &::before {
+      margin-right: 20px;
+    }
+
+    &::after {
+      margin-left: 20px;
+    }
+}
