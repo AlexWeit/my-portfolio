@@ -5,7 +5,8 @@ $beige: #eeebdf;
 $main-font-color : #373e42;
 $grayTitle : #373e42;
 $grayText : #455a64;
-$green : #10c1a8;
+$green : #00bfa5;
+$darkGreen : #009688;
 
 //layout: setups, fonts
 @import "layout/setups";
@@ -18,6 +19,7 @@ $green : #10c1a8;
 
 // blocks
 @import "blocks/hero";
+@import "blocks/user";
 @import "blocks/socials";
 @import "blocks/about";
 @import "blocks/triangles";
@@ -26,3 +28,5 @@ $green : #10c1a8;
 @import "blocks/map";
 @import "blocks/contacts";
 @import "blocks/footer";
+
+@import "blocks/welcome";

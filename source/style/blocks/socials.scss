@@ -18,3 +18,11 @@
 		fill: $white;
 	}
 }
+
+.icons__socials_green {
+	fill: $green;
+
+	&:hover {
+		fill: $darkGreen;
+	}
+}

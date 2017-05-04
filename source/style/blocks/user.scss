@@ -1,0 +1,33 @@
+.user {
+	@include centered(x);
+	position: relative;
+}
+
+.user__photo {
+	width: 140px;
+	margin: auto;
+}
+
+.user__photo-avatar {
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.user__photo-img {
+	width: 100%;
+}
+
+.user__name {
+	text-align: center;
+	font-size: 35px;
+	font-family: "robotomedium";
+}
+
+.user__desc {
+	text-align: center;
+	font-size: 16px;
+	font-family: "robotolight";
+}
+

@@ -4,4 +4,30 @@ block title
 	| Welcome
 
 block content
-	
+	.welcome
+		.welcome__authoriz
+			a(href="#").authoriz__link
+				.authoriz__btn Авторизоваться
+
+		.welcome__content
+			.welcome__user
+				.welcome__hero
+					include ../sections/user
+				.welcome__socials
+					ul.socials.welcome__socials-list
+						-
+							icons = ['vk', 'gh', 'in'];
+						each icon in icons
+							li.socials__item
+								a(href="#").socials__link
+									svg.icons.icons__socials.icons__socials_green
+										use(xlink:href=`assets/img/sprite.svg#${icon}`)
+
+			nav.welcome__nav
+				a(href="works.html").nav__btn.nav__btn_works Мои работы
+				a(href="about.html").nav__btn.nav__btn_about Обо мне
+				a(href="blog.html").nav__btn.nav__btn_blog Блог
+
+block footer
+	.welcome__footer
+		.footer__welcome-user-name © Александра Вейт | создано с любовью в LoftSchool | 2017

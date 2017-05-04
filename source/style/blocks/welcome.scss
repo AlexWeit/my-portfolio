@@ -1,0 +1,97 @@
+//bg
+.welcome {
+	background: url(../img/bg/bg-mountain.jpg);
+	background-size: cover;
+    background-position: center center;
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+//autorization
+.welcome__authoriz {
+	top: 20px;
+    right: 5%;
+    position: absolute;
+}
+
+.authoriz__link {
+	display: block;
+	float: right;
+	width: 180px;
+	height: 45px;
+	border: 1px solid $white;
+	border-radius: 4px;
+	color: $white;
+}
+
+.authoriz__btn {
+	@include centered(y);
+	position: relative;
+	text-align: center;
+}
+
+//content
+.welcome__content {
+	width: 380px;
+	border-radius: 4px;
+	overflow: hidden;
+	@include centered();
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+.welcome__user {
+	padding: 30px;
+}
+
+.welcome__socials {
+	margin-top: 30px;
+}
+
+.welcome__socials-list {
+	text-align: center;
+}
+
+.welcome__nav {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	font-size: 0;
+}
+
+
+.nav__btn {
+	padding: 15px 30px;
+	font-size: 16px;
+	display: inline-block;
+	color: $white;
+	background-color: rgba(0, 189, 163, 0.8);
+	margin-left: 2px;
+	
+
+	&:hover {
+		background-color: rgba(0, 150, 136, 0.8);
+	}
+
+	&_works {
+		padding-left: 32px;
+		margin-left: 0;
+	}
+
+	&_blog {
+		padding-right: 33.1px;
+	}
+	
+}
+
+
+//footer
+.welcome__footer {
+	text-align: center;
+    height: 60px;
+    margin-top: -60px;
+    position: relative;
+    color: $white;
+    font-family: "robotolight";
+}
