@@ -15,3 +15,16 @@
 	fill: $beige;
 	right: 0;
 }
+
+.triangle_fill_white-F {
+	fill: $white;
+	width: 50%;
+
+	&_left {
+		left: 0;
+	}
+
+	&_right {
+		right: 0;
+	}
+}

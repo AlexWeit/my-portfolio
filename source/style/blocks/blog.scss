@@ -1,0 +1,92 @@
+.user__blog-title {
+	position: relative;
+}
+
+.user__blog-title_bg {
+	opacity: 0.1;
+	@include centered();
+	top: 77%;
+	left: 51%;
+	width: 330px;
+
+}
+
+.blog__section-title {
+	text-align: center;
+	font-size: 63px;
+	font-family: "bernier_regularregular";
+	color: $white;
+	@extend %titleDecor;
+
+	&::before, &::after {
+      color: $white;
+      opacity: 0.3;
+    }
+}
+
+.user__blog-subtitle {
+	text-align: center;
+	font-size: 16px;
+	font-family: "robotoregular";
+}
+
+//blog
+.blog {
+	@extend %clearfix;
+	position: relative;
+}
+
+.blog__sidebar {
+	float: left;
+	width: 30%;
+	min-height: 1000px;
+	position: relative;
+	padding: 60px;
+}
+
+.blog__articles {
+	float: left;
+	width: 70%;
+	min-height: 1000px;
+	position: relative;
+	padding: 60px;
+}
+
+//sidebar
+.sidebar__item {
+	text-align: right;
+	padding: 16px;
+
+	&_active {
+		border-right: 3px solid $green;
+	}
+}
+
+.sidebar__link {
+	color: $grayText;
+
+	&_active {
+		color: $green;
+	}
+
+	&:hover {
+		color: $green;
+	}
+
+}
+
+
+//article
+.article {
+	margin-bottom: 130px;
+}
+
+.article__title {
+	font-family: "bernier_regularregular";
+	font-size: 35px;
+}
+
+.article__date {
+	color: $green;
+	padding: 20px 0;
+}

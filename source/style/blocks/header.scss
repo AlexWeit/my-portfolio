@@ -1,0 +1,21 @@
+.container_header {
+	@extend %clearfix;
+	margin: 30px 0 0;
+    padding: 0 30px;
+
+	.socials_header {
+	float: left;
+	}
+
+	.hamburger {
+	float: right;
+	}
+
+	.icon__hamburger {
+	fill: $lightBlue;
+
+		&:hover {
+		fill: $white;
+		}
+	}
+}

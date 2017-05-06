@@ -1,0 +1,22 @@
+section.section.hero
+	.hero__bg
+			img(src="assets/img/bg/bg-mountain-mask.jpg", alt="bg-mountain-mask").hero__bg-img
+
+	.container-hero
+		include ../sections/header
+					
+		.hero__title
+			//img(src="assets/img/decor/portfolio_header.svg" alt="portfolio_header").section-title
+			
+			.user.hero__user-block
+				.user__photo
+					.user__photo-avatar
+						img(src="assets/img/content/user.png", alt="user-avatar").user__photo-img
+				.user__blog-title
+					img(src="assets/img/decor/blog_header.svg" alt="portfolio_header").user__blog-title_bg
+					.title.blog__section-title Блог
+				.user__blog-subtitle Статьи, которые я написала
+
+		//a(href="#").arrow-down
+			svg.icons.icon__arrow-down
+				use(xlink:href='assets/img/sprite.svg#arrow_down')
