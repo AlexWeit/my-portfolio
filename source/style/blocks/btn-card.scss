@@ -1,0 +1,44 @@
+.btn-card {
+  list-style: none;
+  display: table;
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+}
+
+.btn-card_main {
+  margin-top: 35px;
+}
+
+.btn-card__item{
+  display: table-cell;
+  border-right: 1px solid $white;
+  background-color: $green;
+  //transition: background-color, 0.2s;
+  height: 100%;
+
+  &:last-of-type {
+    border-right: none;
+  }
+
+  &:hover {
+    background-color: $darkGreen;
+  }
+}
+
+.btn-card__link {
+  width: 100%;
+  display: table;
+  padding: 13px 32px 14px 31px;;
+  text-decoration: none;
+  height: 100%;
+  color: $white;
+  //font-family: $light;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,59 @@
+extends ../layout
+
+block title
+	| Мои работы
+
+block content
+	include ../sections/hero
+
+	section.section.works
+		svg(
+			viewbox="0 0 1000 100"
+			preserveAspectRatio="none"
+			class="triangle triangle_fill_white-works triangle_fill_white-works_left about__triangles")
+			polygon(points="0,0 0,100 1000,100")
+		svg(
+			viewbox="0 0 1000 100"
+			preserveAspectRatio="none"
+			class="triangle triangle_fill_white-works triangle_fill_white-works_right about__triangles")
+			polygon(points="0,100 1000,100 1000,0")
+
+		.works__my-works
+			+title('Мои работы', 'works_header.svg', 'my-works__title')
+
+			include ../sections/slider
+
+		.works__about-me
+			+title('Что обо мне говорят', 'about_header.svg', 'about-me__title')
+
+			.works__reviews
+				.works__review
+					i(class="fa fa-quote-left fa-2x" aria-hidden="true")
+					.review__text
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi veniam debitis ipsa aliquam animi accusantium asperiores labore libero quod rerum corporis doloremque, eius similique natus quos officiis soluta repudiandae nulla?
+					.review__autor_container
+						.review__autor__pic
+							img.review__autor__pic_dima(src="assets/img/content/dmitriy.png", alt="dmitriy")
+						.review__autor
+							.autor__name Дмитрий Ковальчук
+							.autor__desc основатель Loftschool
+				.works__review
+					i(class="fa fa-quote-left fa-2x" aria-hidden="true")
+					.review__text
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi veniam debitis ipsa aliquam animi accusantium asperiores labore libero quod rerum corporis doloremque, eius similique natus quos officiis soluta repudiandae nulla?
+					.review__autor_container
+						.review__autor__pic
+							img.review__autor__pic_vova(src="assets/img/content/vladimir.png", alt="vladimir")
+						.review__autor
+							.autor__name Сабанцев Владимир
+							.autor__desc преподаватель
+
+			section.works__form
+				include ../sections/works_form
+
+			a(href='#').works__page-up
+				svg.icons.works__page-up_icon(viewBox="0 0 10 10" preserveAspectRatio='none')
+					use(xlink:href='assets/img/sprite.svg#arrow_up')
+
+block footer
+	include ../sections/footer

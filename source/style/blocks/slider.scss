@@ -1,0 +1,135 @@
+.slider-section {
+  background-color: #efebe0;
+
+  .container {
+    @extend %clearfix;
+  }
+}
+
+.slider-section__img {
+  height: 525px;
+  width: 50%;
+  background-color: #efebe0;
+  float: right;
+  position: relative;
+
+  img {
+    max-width: 80%;
+    @include centered();
+    max-height: 100%;
+  }
+}
+
+.slider-section__info {
+  height: 750px;
+  width: 50%;
+  background-color: #f0efe9;
+  float: left;
+  position: relative;
+}
+
+.slider-section__nav {
+  height: 225px;
+  width: 50%;
+  background-color: #efebe0;
+  float: right;
+  display: table;
+  position: relative;
+
+  img {
+    max-width: 70%;
+    display: block;
+    margin: auto;
+  }
+
+}
+
+.slider-section__arrow {
+  fill: $white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+}
+
+.slider-section__arrow_up {
+  transform: translate(-50%, -50%);
+}
+.slider-section__arrow_down {
+  transform: translate(-50%, -50%);
+}
+
+.slider-section__navigation {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &:first-child {
+    &:after {
+      background-color: rgba(176, 183, 170, 0.7);
+    }
+  }
+  &:last-child {
+    &:after {
+      background-color: rgba(147, 153, 141, 0.7);
+    }
+  }
+}
+
+.slider-section__container {
+  @include centered();
+}
+
+.slider-section__name {
+  .text__title-line {
+    //max-width: 320px;
+  }
+}
+
+.slider-section__tech {
+  text-align: center;
+  color: $green;
+  margin: 30px 0;
+  padding: 20px 0;
+  border-top: 1px solid $green;
+  border-bottom: 1px solid $green;
+}
+
+.slider-section__btn {
+  display: block;
+  margin: auto;
+  max-width: 200px;
+  text-align: center;
+  position: relative;
+  background-color: $green;
+  border-radius: 3px;
+  padding: 3px 0;
+
+  &:hover {
+    background-color: $darkGreen;
+  }
+}
+
+.slider-section__icon {
+  display: inline-block;
+  vertical-align: middle;
+  fill: $white;
+}
+.slider-section__text {
+  margin-left: 12px;
+  color: $white;
+  line-height: 36px;
+}

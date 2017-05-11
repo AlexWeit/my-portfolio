@@ -1,0 +1,106 @@
+.works {
+	position: relative;
+	background-color: #faf8f0;
+}
+
+//мои работы
+
+.works__my-works {
+	
+}
+
+.my-works__title {
+	text-align: center;
+	font-size: 63px;
+	font-family: "bernier_regularregular";
+	color: $grayTitle;
+	background-size: 100% 100%;
+	@extend %titleDecor;
+	padding: 25px 0;
+	margin-bottom: 25px;
+}
+
+
+
+//что обо мне говорят
+
+.works__about-me {
+	background: url(../img/bg/bg-works.jpg);
+	background-size: cover;
+    background-position: center center;
+    min-height: 1280px;
+    position: relative;
+}
+
+.about-me__title {
+	text-align: center;
+	font-size: 63px;
+	font-family: "bernier_regularregular";
+	color: $grayTitle;
+	background-size: 100% 100%;
+	@extend %titleDecor;
+	padding: 25px 0;
+	margin-bottom: 40px;
+}
+
+.fa-quote-left {
+	color: #dde0e0;
+}
+
+.works__reviews {
+	max-width: 780px;
+	margin: 0 auto 70px;
+	@extend %clearfix;
+}
+
+.works__review {
+	float: left;
+	width: 50%;
+}
+
+.review__text {
+    padding: 25px 35px 25px 0;
+}
+
+.review__autor_container {
+	@extend %clearfix; 
+}
+
+.review__autor__pic {
+	float: left;
+    width: 77px;
+    height: 77px;
+    overflow: hidden;
+    border-radius: 50%;
+
+    img {
+    	width: 100%;
+    }
+}
+
+.review__autor {
+	float: left;
+	padding: 20px;
+	color: $green;
+}
+
+.autor__name {
+    font-weight: bold;
+}
+
+//
+
+.works__page-up {
+	display: block;
+	height: 155px;
+	position: relative;	
+}
+
+.works__page-up_icon {
+	fill: #c2d6d6;
+	@include centered();
+
+	&:hover {
+		fill: $white;
+	}
+}
