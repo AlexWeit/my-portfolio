@@ -3,13 +3,10 @@
 	overflow: hidden;
 	position: relative;
 	color: $white;
-}
-
-.hero__bg {
-	top: 0;
-	width: 100%;
-    max-height: 620px;
-	@include centered(x);
+	background: url(../img/bg/bg-mountain-mask.jpg);
+	background-size: cover;
+    min-height: 100%;
+    width: 100%;
 }
 
 .container-hero {
@@ -25,8 +22,10 @@
 }
 
 .section-title {
-	position: absolute;
 	opacity: 0.1;
+	@include centered(x);
+	width: 100%;
+    max-height: 270px;
 }
 
 //user

@@ -19,6 +19,22 @@
 	}
 }
 
+.icons__socials_white_footer {
+	height: 35px;
+	width: 35px;
+    background: rgba(255, 255, 255, 0.8);
+    fill: rgba(69, 90, 100, 0.8);
+    border-radius: 50%;
+    border: 0.5px solid rgba(255, 255, 255, 0.8);
+
+    &:hover {
+    	background: none;
+	    fill: rgba(255, 255, 255, 0.8);
+	    border-radius: none;
+	    border: none;
+    }
+}
+
 .icons__socials_green {
 	fill: $green;
 
