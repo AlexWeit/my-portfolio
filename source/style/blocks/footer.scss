@@ -24,10 +24,24 @@
 	float: left;
 	width: 50%;
 	margin: 20px 0;
+
+	@include tablets {
+		float: none;
+		width: 100%;
+	}
+}
+
+.footer__left {
+	@include tablets {
+		text-align: center;
+	}
 }
 
 .footer__right {
 	text-align: right;
+	@include tablets {
+		text-align: center;
+	}
 }
 
 .nav-menu__item {

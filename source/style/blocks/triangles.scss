@@ -1,43 +1,35 @@
-.about__triangles {
+.section__triangles {
+	@extend %clearfix;
+	position: absolute;
+	bottom: 100%;
+	width: 100%;
+}
+
+.triangle-container_left, .triangle-container_right {
+	float: left;
+	width: 50%;
+	position: relative;
+}
+
+
+.triangle {
 	display: block;
 	width: 100%;
 	height: 110px;
-	position: absolute;
-	bottom: 100%;
 }
 
-.triangle_fill_white {
+.triangle_fill_white-about {
 	fill: $darkWhite;
-	left: 0;
 }
 
-.triangle_fill_beige {
+.triangle_fill_beige-about {
 	fill: $beige;
-	right: 0;
 }
 
-.triangle_fill_white-F {
+.triangle_fill_white-blog {
 	fill: $white;
-	width: 50%;
-
-	&_left {
-		left: 0;
-	}
-
-	&_right {
-		right: 0;
-	}
 }
 
 .triangle_fill_white-works {
 	fill: #faf8f0;
-	width: 50%;
-
-	&_left {
-		left: 0;
-	}
-
-	&_right {
-		right: 0;
-	}
 }

@@ -6,4 +6,8 @@
 .map__bg {
 	position: absolute;
 	width: 100%;
+
+	@include phones {
+		//position: relative;
+	}
 }

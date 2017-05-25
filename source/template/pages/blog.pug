@@ -8,16 +8,19 @@ block content
 	include ../sections/hero_blog
 
 	main.blog
-		svg(
-			viewbox="0 0 1000 100"
-			preserveAspectRatio="none"
-			class="triangle triangle_fill_white-F triangle_fill_white-F_left about__triangles")
-			polygon(points="0,0 0,100 1000,100")
-		svg(
-			viewbox="0 0 1000 100"
-			preserveAspectRatio="none"
-			class="triangle triangle_fill_white-F triangle_fill_white-F_right about__triangles")
-			polygon(points="0,100 1000,100 1000,0")
+		.section__triangles
+			.triangle-container_left
+				svg(
+					viewbox="0 0 1000 100"
+					preserveAspectRatio="none"
+					class="triangle triangle_left triangle_fill_white-blog")
+					polygon(points="0,0 0,100 1000,100")
+			.triangle-container_right
+				svg(
+					viewbox="0 0 1000 100"
+					preserveAspectRatio="none"
+					class="triangle triangle_right triangle_fill_white-blog")
+					polygon(points="0,100 1000,100 1000,0")
 		aside.blog__sidebar
 			ul.sidebar__list
 				li.sidebar__item.sidebar__item_active

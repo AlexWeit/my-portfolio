@@ -1,3 +1,6 @@
+//VARIABLES
+
+//Colors
 $lightBlue : #c2d6d6;
 $white : #ffffff;
 $darkWhite : #efeee9;
@@ -8,13 +11,18 @@ $grayText : #455a64;
 $green : #00bfa5;
 $darkGreen : #009688;
 
+
+//IMPORTS
+
+//helpers: mixins
+@import "helpers/mixins";
+
 //layout: setups, fonts
 @import "layout/setups";
 @import "layout/fonts";
 @import "layout/font-awesome";
 
-//helpers: mixins, sprite
-@import "helpers/mixins";
+//helpers: sprite
 @import "helpers/sprite";
 
 // blocks

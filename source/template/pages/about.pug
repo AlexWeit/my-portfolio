@@ -7,62 +7,68 @@ block content
 	include ../sections/hero
 
 	section.section.about
-		.about__col.about__col_left
-			svg(
+
+		.section__triangles
+			.triangle-container_left
+				svg(
 				viewbox="0 0 1000 100"
 				preserveAspectRatio="none"
-				class="triangle triangle_fill_white about__triangles")
-				polygon(points="0,0 0,100 1000,100")
-			.about__col-content
-				+title('Обо мне', 'about_header.svg', 'about__section-title')
-				.user-about
-					.user-about__picture
-						img(src="assets/img/content/user.png", alt="user").user-about__picture-avatar
-					.user-about__title
-						.subtitle
-							| Кто я
-					.user-about__text
-						p 
-							| Я веб разработчик из Москвы. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-						p
-							| Этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
-		
-		.about__col.about__col_right
-			svg(
+				class="triangle triangle_left triangle_fill_white-about")
+					polygon(points="0,0 0,100 1000,100")
+			.triangle-container_right
+				svg(
 				viewbox="0 0 1000 100"
 				preserveAspectRatio="none"
-				class="triangle triangle_fill_beige about__triangles")
-				polygon(points="0,100 1000,100 1000,0")
-			.about-data
-				.about-data__desc.about-user-info
-					.about-user-info__title
-						.subtitle
-							| Чем я могу быть полезна
-					.about-user-info__text
-						p
-							| Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-				.about-data__content
-					ul.skills-group
-						each skillGroup in ['Frontend', 'Backend', 'WorkFlow']
-							li.skills-group__item
-								.skills-group__section
-									.skills-group__title= skillGroup
-									ul.skills-list
-										- for (var i = 0; i < 4; i++)
-											li.skills-list__item
-												.skill
-													svg(viewbox="0 0 100 100" preserveAspectRatio="none").skill__circle
-														circle(cx="50" cy="50" r="40").skills__circle-under
-														circle(cx="50" cy="50" r="40").skills__circle-above
-													- var skillsFrontend = ['HTML5', 'CSS3', 'JavaScript & jQuery']
-													- var skillsBackend = ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
-													- var skillsWorkflow = ['Git', 'Gulp', 'Bower']
-													if skillGroup=='Frontend'
-														.skill__title=skillsFrontend[i]
-													else if skillGroup=='Backend'
-														.skill__title=skillsBackend[i]
-													else if skillGroup=='WorkFlow'
-														.skill__title=skillsWorkflow[i]
+				class="triangle triangle_right triangle_fill_beige-about")
+					polygon(points="0,100 1000,100 1000,0")
+
+		.section__about-colomns
+			.about__col.about__col_left
+				.about__col-content
+					+title('Обо мне', 'about_header.svg', 'about__section-title')
+					.user-about
+						.user-about__picture
+							img(src="assets/img/content/user.png", alt="user").user-about__picture-avatar
+						.user-about__title
+							.subtitle
+								| Кто я
+						.user-about__text
+							p 
+								| Я веб разработчик из Москвы. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+							p
+								| Этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
+			
+			.about__col.about__col_right
+				.about-data
+					.about-data__desc.about-user-info
+						.about-user-info__title
+							.subtitle
+								| Чем я могу быть вам полезна
+						.about-user-info__text
+							p
+								| Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+					.about-data__content
+						ul.skills-group
+							each skillGroup in ['Frontend', 'Backend', 'WorkFlow']
+								li.skills-group__item
+									.skills-group__section
+										.skills-group__title= skillGroup
+										ul.skills-list
+											- for (var i = 0; i < 4; i++)
+												li.skills-list__item
+													.skill
+														svg(viewbox="0 0 100 100" preserveAspectRatio="none").skill__circle
+															circle(cx="50" cy="50" r="40").skills__circle-under
+															circle(cx="50" cy="50" r="40").skills__circle-above
+														- var skillsFrontend = ['HTML5', 'CSS3', 'JavaScript & jQuery']
+														- var skillsBackend = ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
+														- var skillsWorkflow = ['Git', 'Gulp', 'Bower']
+														if skillGroup=='Frontend'
+															.skill__title=skillsFrontend[i]
+														else if skillGroup=='Backend'
+															.skill__title=skillsBackend[i]
+														else if skillGroup=='WorkFlow'
+															.skill__title=skillsWorkflow[i]
 													
 
 	include ../sections/map

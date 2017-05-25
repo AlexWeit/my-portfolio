@@ -5,6 +5,14 @@
 	width: 380px;
 	margin: auto;
 	min-height: 290px;
+
+	@include phones {
+		position: absolute;
+		top: 0;
+		transform: none;
+		width: 100%;
+		background: $white;
+	}
 }
 
 .user-contacts__title {
@@ -14,6 +22,11 @@
 .user-contacts__list {
 	width: 290px;
 	margin: auto;
+
+	@include phones {
+		margin: 0 10px;
+		width: 96%;
+	}
 }
 
 .user-contacts__item {

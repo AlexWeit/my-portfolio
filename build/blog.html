@@ -51,12 +51,18 @@
         </div>
       </section>
       <main class="blog">
-        <svg class="triangle triangle_fill_white-F triangle_fill_white-F_left about__triangles" viewbox="0 0 1000 100" preserveAspectRatio="none">
-          <polygon points="0,0 0,100 1000,100"></polygon>
-        </svg>
-        <svg class="triangle triangle_fill_white-F triangle_fill_white-F_right about__triangles" viewbox="0 0 1000 100" preserveAspectRatio="none">
-          <polygon points="0,100 1000,100 1000,0"></polygon>
-        </svg>
+        <div class="section__triangles">
+          <div class="triangle-container_left">
+            <svg class="triangle triangle_left triangle_fill_white-blog" viewbox="0 0 1000 100" preserveAspectRatio="none">
+              <polygon points="0,0 0,100 1000,100"></polygon>
+            </svg>
+          </div>
+          <div class="triangle-container_right">
+            <svg class="triangle triangle_right triangle_fill_white-blog" viewbox="0 0 1000 100" preserveAspectRatio="none">
+              <polygon points="0,100 1000,100 1000,0"></polygon>
+            </svg>
+          </div>
+        </div>
         <aside class="blog__sidebar">
           <ul class="sidebar__list">
             <li class="sidebar__item sidebar__item_active"><a class="sidebar__link sidebar__link_active" href="#">Самое важное в SASS</a></li>

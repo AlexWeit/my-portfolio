@@ -7,16 +7,19 @@ block content
 	include ../sections/hero
 
 	section.section.works
-		svg(
-			viewbox="0 0 1000 100"
-			preserveAspectRatio="none"
-			class="triangle triangle_fill_white-works triangle_fill_white-works_left about__triangles")
-			polygon(points="0,0 0,100 1000,100")
-		svg(
-			viewbox="0 0 1000 100"
-			preserveAspectRatio="none"
-			class="triangle triangle_fill_white-works triangle_fill_white-works_right about__triangles")
-			polygon(points="0,100 1000,100 1000,0")
+		.section__triangles
+			.triangle-container_left
+				svg(
+					viewbox="0 0 1000 100"
+					preserveAspectRatio="none"
+					class="triangle triangle_left triangle_fill_white-works")
+					polygon(points="0,0 0,100 1000,100")
+			.triangle-container_right
+				svg(
+					viewbox="0 0 1000 100"
+					preserveAspectRatio="none"
+					class="triangle triangle_right triangle_fill_white-works")
+					polygon(points="0,100 1000,100 1000,0")
 
 		.works__my-works
 			+title('Мои работы', 'works_header.svg', 'my-works__title')

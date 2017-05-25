@@ -1,13 +1,19 @@
 .about {
-	@extend %clearfix;
 	position: relative;
 }
 
+
+.section__about-colomns {
+	display: flex;
+	flex-direction: row;
+
+	@include tablets {
+		flex-direction: column;
+	}
+}
+
 .about__col {
-	float: left;
-	width: 50%;
-	min-height: 1000px;
-	position: relative;
+	flex: 1;
 
 	&_left {
 		background: $darkWhite;
@@ -15,25 +21,34 @@
 
 	&_right {
 		background: $beige;
-	}
+	}	
 }
-
-
-//triangles
-
-
 
 //left
 
 .about__col-content {
-	padding: 0 10%;
+	margin: 0 20px 30px;
 	@extend %clearfix;
+
+	@include desktop {
+		margin: 0 80px 40px;
+	}
+
+	@include tablets {
+		margin: 0 150px 45px;
+	}
+
+	@include phones {
+		margin: 10px 10px 30px;
+	}
 }
 
 .about__section-title {
-	//float: left;
+	float: left;
+	width: 50%;
 	text-align: center;
 	margin-bottom: 30px;
+	padding-right: 6%;
 	font-size: 63px;
 	font-family: "bernier_regularregular";
 	color: $grayTitle;
@@ -41,10 +56,27 @@
 	@extend %titleDecor;
 }
 
+.user-about {
+	float: left;
+	width: 50%;
+}
+
+.about__section-title, .user-about {
+	@include desktop {
+		float: none;
+		width: 100%;
+	}
+}
+
 .user-about__picture {
+	margin-top: 20px;
 	margin-bottom: 35px;
 	text-align: center;
 	width: 100%;
+
+	@include desktop {
+		margin-top: 0;
+	}
 
 	img {
 		display: inline-block;
@@ -75,7 +107,33 @@
 
 //right
 .about-data {
-	padding: 10px 6% 0 6%;
+	margin: 10px 40px 20px 40px;
+
+	@include tablets {
+		margin: 10px 105px 20px 105px;
+	}
+
+	@include phones {
+		margin: 10px 10px 20px 10px;
+	}
+}
+
+.about-data__desc {
+	@include tablets {
+		margin: 0 45px;
+	}
+	@include phones {
+		margin: 0;
+	}
+}
+
+.about-user-info__title {
+	@include tablets {
+		//margin: 0 100px;
+	}
+	@include phones {
+		//margin: 0 40px;
+	}
 }
 
 .about-user-info__text {
@@ -88,14 +146,8 @@
 	}
 }
 
-
-//skills
-
-
-//skill
-
-//map
-
-
-
-//contacts
+.skills-group__title {
+	@include tablets {
+		text-align: center;
+	}
+}
