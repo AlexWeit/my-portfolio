@@ -1,4 +1,5 @@
 //-примесь для заголовков
-mixin title (title, url, additionClass)
-	.title(style=`background-image: url('assets/img/decor/${url}')` class=additionClass)= title
+mixin title (title, url, additionClass, textClass)
+	.title(style=`background-image: url('assets/img/decor/${url}')` class=additionClass)
+		h2(class=textClass).title-text= title
 

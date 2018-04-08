@@ -23,6 +23,11 @@
 	border: 1px solid $white;
 	border-radius: 4px;
 	color: $white;
+
+	&:hover {
+		background-color: $white;
+		color: $darkGreen;
+	}
 }
 
 .authoriz__btn {
@@ -53,36 +58,26 @@
 	text-align: center;
 }
 
+// nav
 .welcome__nav {
 	margin: 0;
 	padding: 0;
 	position: relative;
-	font-size: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 
 .nav__btn {
-	padding: 15px 30px;
-	font-size: 16px;
-	display: inline-block;
+	padding: 15px 31px;
 	color: $white;
 	background-color: rgba(0, 189, 163, 0.8);
-	margin-left: 2px;
 	
 
 	&:hover {
 		background-color: rgba(0, 150, 136, 0.8);
 	}
-
-	&_works {
-		padding-left: 32px;
-		margin-left: 0;
-	}
-
-	&_blog {
-		padding-right: 33.1px;
-	}
-	
 }
 
 

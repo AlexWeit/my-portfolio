@@ -5,6 +5,7 @@
 	width: 380px;
 	margin: auto;
 	min-height: 290px;
+	text-align: center;
 
 	@include phones {
 		position: absolute;
@@ -22,6 +23,8 @@
 .user-contacts__list {
 	width: 290px;
 	margin: auto;
+	text-align: left;
+	padding-bottom: 38px;
 
 	@include phones {
 		margin: 0 10px;

@@ -1,5 +1,6 @@
 .footer {
 	position: absolute;
+	bottom: 0;
 	background: rgba(69, 90, 100, 0.8);
 	$height: 147px;
 	min-height: $height;
@@ -25,21 +26,21 @@
 	width: 50%;
 	margin: 20px 0;
 
-	@include tablets {
+	@include screen900 {
 		float: none;
 		width: 100%;
 	}
 }
 
 .footer__left {
-	@include tablets {
+	@include screen900 {
 		text-align: center;
 	}
 }
 
 .footer__right {
 	text-align: right;
-	@include tablets {
+	@include screen900 {
 		text-align: center;
 	}
 }

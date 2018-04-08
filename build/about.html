@@ -4,34 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="assets/img/favicon/fav_mount.png">
     <link href="assets/css/foundation.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
+    <script src="assets/js/foundation.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
     <title>Обо мне
     </title>
   </head>
   <body>
     <div class="wrapper">
+      <div class="navigation">
+        <nav class="main-menu">
+          <ul class="main-menu__list">
+            <li class="main-menu__item"><a class="main-menu__link" href="works.html">Мои работы</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="about.html">Обо мне</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="blog.html">Блог</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="index.html">Авторизация</a></li>
+          </ul>
+        </nav>
+      </div>
       <section class="section hero">
+        <header class="container_header">
+          <ul class="socials socials_header">
+            <li class="socials__item"><a class="socials__link" href="https://vk.com/wunya" target="_blank">
+                <svg class="icons icons__socials icons__socials_white">
+                  <use xlink:href="assets/img/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link" href="https://github.com/AlexWeit" target="_blank">
+                <svg class="icons icons__socials icons__socials_white">
+                  <use xlink:href="assets/img/sprite.svg#gh"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link" href="https://linkedin.com/" target="_blank">
+                <svg class="icons icons__socials icons__socials_white">
+                  <use xlink:href="assets/img/sprite.svg#in"></use>
+                </svg></a></li>
+          </ul><a class="hamburger" href="#">
+            <svg class="icons icon__hamburger">
+              <use xlink:href="assets/img/sprite.svg#hamburger"></use>
+            </svg></a>
+        </header>
         <div class="container-hero">
-          <header class="container_header">
-            <ul class="socials socials_header">
-              <li class="socials__item"><a class="socials__link" href="#">
-                  <svg class="icons icons__socials icons__socials_white">
-                    <use xlink:href="assets/img/sprite.svg#vk"></use>
-                  </svg></a></li>
-              <li class="socials__item"><a class="socials__link" href="#">
-                  <svg class="icons icons__socials icons__socials_white">
-                    <use xlink:href="assets/img/sprite.svg#gh"></use>
-                  </svg></a></li>
-              <li class="socials__item"><a class="socials__link" href="#">
-                  <svg class="icons icons__socials icons__socials_white">
-                    <use xlink:href="assets/img/sprite.svg#in"></use>
-                  </svg></a></li>
-            </ul><a class="hamburger" href="#">
-              <svg class="icons icon__hamburger">
-                <use xlink:href="assets/img/sprite.svg#hamburger"></use>
-              </svg></a>
-          </header>
           <div class="hero__title"><img class="section-title" src="assets/img/decor/portfolio_header.svg" alt="portfolio_header">
             <div class="user hero__user-block">
               <div class="user__photo">
@@ -40,11 +53,11 @@
               <div class="user__name">Александра Вейт</div>
               <div class="user__desc">Личный сайт веб-разработчика</div>
             </div>
-          </div><a class="arrow-down" href="#">
-            <svg class="icons icon__arrow-down">
-              <use xlink:href="assets/img/sprite.svg#arrow_down"></use>
-            </svg></a>
-        </div>
+          </div>
+        </div><a class="arrow-down" href="#">
+          <svg class="icons icon__arrow-down">
+            <use xlink:href="assets/img/sprite.svg#arrow_down"></use>
+          </svg></a>
       </section>
       <section class="section about">
         <div class="section__triangles">
@@ -61,26 +74,28 @@
         </div>
         <div class="section__about-colomns">
           <div class="about__col about__col_left">
-            <div class="about__col-content">
-              <div class="title about__section-title" style="background-image: url('assets/img/decor/about_header.svg');">Обо мне</div>
-              <div class="user-about">
-                <div class="user-about__picture"><img class="user-about__picture-avatar" src="assets/img/content/user.png" alt="user"></div>
-                <div class="user-about__title">
-                  <div class="subtitle">Кто я</div>
-                </div>
-                <div class="user-about__text">
-                  <p>
-                     Я веб разработчик из Москвы. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
-                  <p>Этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.</p>
-                </div>
+            <div class="title-container-flex">
+              <div class="title about__section-title" style="background-image: url('assets/img/decor/about_header.svg');">
+                <h2 class="about__section-title_text title-text">Обо мне</h2>
+              </div>
+            </div>
+            <div class="user-about">
+              <div class="user-about__picture"><img class="user-about__picture-avatar" src="assets/img/content/user.png" alt="user"></div>
+              <div class="user-about__subtitle subtitle">
+                <h3 class="subtitle_text">Кто я</h3>
+              </div>
+              <div class="user-about__text">
+                <p>
+                   Я веб разработчик из Москвы. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
+                <p>Этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.</p>
               </div>
             </div>
           </div>
           <div class="about__col about__col_right">
             <div class="about-data">
               <div class="about-data__desc about-user-info">
-                <div class="about-user-info__title">
-                  <div class="subtitle">Чем я могу быть вам полезна</div>
+                <div class="about-user-info__subtitle subtitle">
+                  <div class="subtitle-text">Чем я могу быть вам полезна</div>
                 </div>
                 <div class="about-user-info__text">
                   <p>Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</p>
@@ -226,8 +241,8 @@
       <section class="section map">
         <div class="map__bg"><img class="map__bg-img" src="assets/img/bg/bg-map.jpg" alt="bg-map"></div>
         <div class="user-contacts">
-          <div class="user-contacts__title">
-            <div class="subtitle">Контакты</div>
+          <div class="user-contacts__subtitle subtitle">
+            <div class="subtitle-text">Контакты</div>
           </div>
           <ul class="user-contacts__list">
             <li class="user-contacts__item item__skype">
@@ -256,42 +271,42 @@
           <div class="city-name">Москва</div>
         </div>
       </section>
+      <footer class="footer">
+        <div class="footer__row footer__row_top">
+          <div class="footer__left">
+            <ul class="nav-menu">
+              <li class="nav-menu__item"><a class="nav-menu__link" href="works.html">Мои работы</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="about.html">Обо мне</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="blog.html">Блог</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="index.html">Авторизация</a></li>
+            </ul>
+          </div>
+          <div class="footer__right">
+            <ul class="socials socials_footer">
+              <li class="socials__item"><a class="socials__link" href="https://vk.com/wunya" target="_blank">
+                  <svg class="icons icons__socials icons__socials_white_footer">
+                    <use xlink:href="assets/img/sprite.svg#vk_round"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="https://github.com/AlexWeit" target="_blank">
+                  <svg class="icons icons__socials icons__socials_white_footer">
+                    <use xlink:href="assets/img/sprite.svg#gh_round"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="https://linkedin.com/" target="_blank">
+                  <svg class="icons icons__socials icons__socials_white_footer">
+                    <use xlink:href="assets/img/sprite.svg#in_round"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__row footer__row_bottom">
+          <div class="footer__left">
+            <div class="footer__about">Я веб-разработчик из Москвы, и этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool.</div>
+          </div>
+          <div class="footer__right">
+            <div class="footer__about-user-name">© Александра Вейт | создано с любовью в LoftSchool | 2017</div>
+          </div>
+        </div>
+      </footer>
     </div>
-    <footer class="footer">
-      <div class="footer__row footer__row_top">
-        <div class="footer__left">
-          <ul class="nav-menu">
-            <li class="nav-menu__item"><a class="nav-menu__link" href="#">Мои работы</a></li>
-            <li class="nav-menu__item"><a class="nav-menu__link" href="#">Обо мне</a></li>
-            <li class="nav-menu__item"><a class="nav-menu__link" href="#">Блог</a></li>
-            <li class="nav-menu__item"><a class="nav-menu__link" href="#">Авторизация</a></li>
-          </ul>
-        </div>
-        <div class="footer__right">
-          <ul class="socials socials_footer">
-            <li class="socials__item"><a class="socials__link" href="#">
-                <svg class="icons icons__socials icons__socials_white_footer">
-                  <use xlink:href="assets/img/sprite.svg#vk_round"></use>
-                </svg></a></li>
-            <li class="socials__item"><a class="socials__link" href="#">
-                <svg class="icons icons__socials icons__socials_white_footer">
-                  <use xlink:href="assets/img/sprite.svg#gh_round"></use>
-                </svg></a></li>
-            <li class="socials__item"><a class="socials__link" href="#">
-                <svg class="icons icons__socials icons__socials_white_footer">
-                  <use xlink:href="assets/img/sprite.svg#in_round"></use>
-                </svg></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__row footer__row_bottom">
-        <div class="footer__left">
-          <div class="footer__about">Я веб-разработчик из Москвы, и этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool.</div>
-        </div>
-        <div class="footer__right">
-          <div class="footer__about-user-name">© Александра Вейт | создано с любовью в LoftSchool | 2017</div>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>

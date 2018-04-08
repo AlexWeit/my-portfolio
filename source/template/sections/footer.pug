@@ -3,18 +3,22 @@ block footer
         .footer__row.footer__row_top
             .footer__left
                 ul.nav-menu
-                    each link in ['Мои работы', "Обо мне", "Блог", "Авторизация"]
+                    -
+                        pages = [{name:'Мои работы', link:'works'}, {name:'Обо мне', link:'about'}, {name:'Блог', link:'blog'}, {name:'Авторизация', link:'index'}];
+                    each page in pages
                         li.nav-menu__item
-                            a(href="#").nav-menu__link= link
+                            a(href=`${page.link}.html`).nav-menu__link= page.name
+                
             .footer__right
                 ul.socials.socials_footer
                     -
-                        icons = ['vk_round', 'gh_round', 'in_round'];
+                        icons = [{name:'vk_round', link:'https://vk.com/wunya'}, {name:'gh_round', link:'https://github.com/AlexWeit'}, {name:'in_round', link:'https://linkedin.com/'}];
                     each icon in icons
                         li.socials__item
-                            a(href="#").socials__link
+                            a(href=`${icon.link}` target='_blank').socials__link
                                 svg.icons.icons__socials.icons__socials_white_footer
-                                    use(xlink:href=`assets/img/sprite.svg#${icon}`)
+                                    use(xlink:href=`assets/img/sprite.svg#${icon.name}`)
+
         .footer__row.footer__row_bottom
             .footer__left
                 .footer__about Я веб-разработчик из Москвы, и этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool.

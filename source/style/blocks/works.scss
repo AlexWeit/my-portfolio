@@ -6,20 +6,12 @@
 //мои работы
 
 .works__my-works {
-	
+	text-align: center;
 }
 
 .my-works__title {
-	text-align: center;
-	font-size: 63px;
-	font-family: "bernier_regularregular";
-	color: $grayTitle;
-	background-size: 100% 100%;
-	@extend %titleDecor;
-	padding: 25px 0;
-	margin-bottom: 25px;
-}
 
+}
 
 
 //что обо мне говорят
@@ -28,46 +20,76 @@
 	background: url(../img/bg/bg-works.jpg);
 	background-size: cover;
     background-position: center center;
-    min-height: 1280px;
+    min-height: 1290px;
     position: relative;
+    text-align: center;
+    padding-bottom: 250px;
+
+    @include screen900 {
+    	padding-bottom: 300px;
+    }
+
+    @include phones {
+    	padding-bottom: 350px;
+    }
 }
 
 .about-me__title {
-	text-align: center;
-	font-size: 63px;
-	font-family: "bernier_regularregular";
-	color: $grayTitle;
-	background-size: 100% 100%;
-	@extend %titleDecor;
-	padding: 25px 0;
-	margin-bottom: 40px;
+	
 }
 
 .fa-quote-left {
 	color: #dde0e0;
 }
 
+.review__icon {
+	@include phones {
+		text-align: center;
+	}
+}
+
 .works__reviews {
-	max-width: 780px;
+	max-width: 800px;
 	margin: 0 auto 70px;
-	@extend %clearfix;
+	text-align: left;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	@include tablets {
+		padding: 0 15px;
+	}
+
+	@include phones {
+		flex-direction: column;
+	}
 }
 
 .works__review {
-	float: left;
-	width: 50%;
+	max-width: 370px;
+	padding: 0 15px;
+
+	@include phones {
+		max-width: none;
+
+		&:first-child {
+			margin-bottom: 20px;
+		}
+
+	}
 }
 
 .review__text {
-    padding: 25px 35px 25px 0;
+    padding: 25px 0;
 }
 
 .review__autor_container {
-	@extend %clearfix; 
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 .review__autor__pic {
-	float: left;
     width: 77px;
     height: 77px;
     overflow: hidden;
@@ -79,8 +101,7 @@
 }
 
 .review__autor {
-	float: left;
-	padding: 20px;
+	margin-left: 20px;
 	color: $green;
 }
 
@@ -88,19 +109,39 @@
     font-weight: bold;
 }
 
-//
+//arrow-up
+.works__page-up-container {
+	position: relative;
+}
 
-.works__page-up {
+.works__page-up_link {
 	display: block;
-	height: 155px;
-	position: relative;	
+	width: 30px;
+    height: 20px;
+	margin: 70px auto 0 auto;	
 }
 
 .works__page-up_icon {
 	fill: #c2d6d6;
-	@include centered();
 
 	&:hover {
 		fill: $white;
 	}
 }
+
+/*
+.empty {
+	height: 50px;
+
+	@include laptop {
+		height: 100px;
+	}
+
+	@include tablets {
+		height: 150px;
+	}
+
+	@include phones {
+		height: 200px;
+	}
+}*/

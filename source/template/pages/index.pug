@@ -16,17 +16,18 @@ block content
 				.welcome__socials
 					ul.socials.welcome__socials-list
 						-
-							icons = ['vk', 'gh', 'in'];
+							icons = [{name:'vk', link:'https://vk.com/wunya'}, {name:'gh', link:'https://github.com/AlexWeit'}, {name:'in', link:'https://linkedin.com/'}];
 						each icon in icons
 							li.socials__item
-								a(href="#").socials__link
+								a(href=`${icon.link}`).socials__link
 									svg.icons.icons__socials.icons__socials_green
-										use(xlink:href=`assets/img/sprite.svg#${icon}`)
+										use(xlink:href=`assets/img/sprite.svg#${icon.name}`)
 
 			nav.welcome__nav
-				a(href="works.html").nav__btn.nav__btn_works Мои работы
-				a(href="about.html").nav__btn.nav__btn_about Обо мне
-				a(href="blog.html").nav__btn.nav__btn_blog Блог
+				-
+					pages = [{name:'Мои работы', link:'works'}, {name:'Обо мне', link:'about'}, {name:'Блог', link:'blog'}];
+				each page in pages
+					a(href=`${page.link}.html` class=`nav__btn_${page.link}`).nav__btn= page.name
 
 block footer
 	.welcome__footer

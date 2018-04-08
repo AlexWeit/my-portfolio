@@ -1,13 +1,35 @@
-.contact-form {
-  width: 380px;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 5px;
-  background-color: rgba(255,255,255,0.5);
+.works__form {
+  //margin-bottom: 150px;
 }
 
+.contact-form {
+  width: 380px;
+  margin: 0 auto;
+  //overflow: hidden;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.5);
+  position: relative;
+  z-index: 0;
+}
+
+//form title
+
+.contact-form__subtitle {
+  padding: 30px 30px;
+
+  &:after {
+    right: 0;
+  }
+
+  &:before {
+    left: 0;
+  }
+}
+
+//form inputs
+
 .contact-form__input-group {
-  padding: 30px 20px 20px 20px;
+  padding: 0 20px;
 }
 
 .contact-form__input {
@@ -18,6 +40,7 @@
   padding: 16px 19px;
   margin-bottom: 20px;
 
+  
   &:focus {
     outline: none;
   }
@@ -51,5 +74,38 @@
 
 textarea.contact-form__input {
   height: 140px;
-  margin-bottom: 0;
+}
+
+// form buttons
+
+.contact-form__btn-container {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 0 0 5px 5px;
+  background-color: $green;
+}
+
+.contact-form__btn {
+  flex: 1;
+  color: $white;
+  padding: 13px 32px 14px 31px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:first-child {
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+  }
+
+  &:hover {
+    background-color: $darkGreen;
+  }
 }

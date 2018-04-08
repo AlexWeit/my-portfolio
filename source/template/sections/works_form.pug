@@ -1,13 +1,11 @@
-form.contact-form
-	.contact-form__input-group
-		h3.subtitle Связаться со мной
+.contact-form
+	.contact-form__subtitle.subtitle 
+		h3.subtitle_text Связаться со мной
+	form.contact-form__input-group
+		input(type='text' placeholder='Имя' name='name').contact-form__input
+		input(type='email' placeholder='Email' name='email').contact-form__input
+		textarea(placeholder='Ваше сообщение' name='message').contact-form__input
 
-		input(type='text' placeholder='Имя').contact-form__input
-		input(type='email' placeholder='Email').contact-form__input
-		textarea(placeholder='Ваше сообщение').contact-form__input
-
-	ul.btn-card
-		li.btn-card__item
-			button(type='submit').btn-card__link Отправить
-		li.btn-card__item
-			button(type='reset').btn-card__link Очистить
+	.contact-form__btn-container
+		button(type='submit').contact-form__btn.btn_submit Отправить
+		button(type='reset').contact-form__btn.btn_submit Очистить

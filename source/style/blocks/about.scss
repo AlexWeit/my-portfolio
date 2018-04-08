@@ -14,9 +14,15 @@
 
 .about__col {
 	flex: 1;
+	text-align: center;
 
 	&_left {
 		background: $darkWhite;
+		display: flex;
+		flex-direction: row;
+		@include desktop {
+			display: block;
+		}
 	}
 
 	&_right {
@@ -26,7 +32,9 @@
 
 //left
 
+/*
 .about__col-content {
+	text-align: center;
 	margin: 0 20px 30px;
 	@extend %clearfix;
 
@@ -41,30 +49,53 @@
 	@include phones {
 		margin: 10px 10px 30px;
 	}
+}*/
+
+.title {
+	color: $grayTitle;
+	font-family:"bernier_regularregular";
+	font-size: 35px;
+	padding: 70px 70px;
+	display: inline-block;
+	position: relative;
+	background-size: 100% 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	text-align: center;
+	@extend %titleDecor;
+
+	@include phones {
+		background-size: 90% 90%;
+	}
+
+	@media screen and (max-width: 524px) {
+	    margin: 0 30px;
+	}
+}
+
+
+.title-container-flex {
+	flex: 1;
 }
 
 .about__section-title {
-	float: left;
-	width: 50%;
-	text-align: center;
-	margin-bottom: 30px;
-	padding-right: 6%;
+	
+}
+
+.about__section-title_text {
 	font-size: 63px;
-	font-family: "bernier_regularregular";
-	color: $grayTitle;
-	background-size: 100% 100%;
-	@extend %titleDecor;
 }
 
 .user-about {
-	float: left;
-	width: 50%;
-}
+	flex: 1;
+	margin: 0 80px;
 
-.about__section-title, .user-about {
-	@include desktop {
-		float: none;
-		width: 100%;
+	@include tablets {
+		margin: 0 145px;
+	}
+
+	@include phones {
+		margin: 0 15px;
 	}
 }
 
@@ -85,16 +116,24 @@
 }
 
 .subtitle {
-	text-align: center;
-	font-size: 35px;
-	font-family: "bernier_regularregular";
 	color: $grayTitle;
+	font-family:"bernier_regularregular";
+	font-size: 35px;
+	padding: 40px 70px;
+	display: inline-block;
+	position: relative;
+	text-align: center;
 	@extend %titleDecor;
+
+	@media screen and (max-width: 524px) {
+	    margin: 0 30px;
+	}
 }
 
 .user-about__text {
 	font-size: 16px;
 	color: $grayText;
+	text-align: left;
 
 	p {
 		margin-bottom: 20px;
@@ -107,43 +146,25 @@
 
 //right
 .about-data {
-	margin: 10px 40px 20px 40px;
+	margin: 0 40px;
 
 	@include tablets {
-		margin: 10px 105px 20px 105px;
+		margin: 0 145px;
 	}
 
 	@include phones {
-		margin: 10px 10px 20px 10px;
-	}
-}
-
-.about-data__desc {
-	@include tablets {
-		margin: 0 45px;
-	}
-	@include phones {
-		margin: 0;
-	}
-}
-
-.about-user-info__title {
-	@include tablets {
-		//margin: 0 100px;
-	}
-	@include phones {
-		//margin: 0 40px;
+		margin: 0 15px;
 	}
 }
 
 .about-user-info__text {
 	font-size: 16px;
 	color: $grayText;
+	text-align: left;
+}
 
-	p {
-		margin-top: 20px;
-		margin-bottom: 30px;
-	}
+.about-data__content {
+	margin: 20px 0;
 }
 
 .skills-group__title {

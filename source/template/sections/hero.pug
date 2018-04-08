@@ -1,13 +1,14 @@
 section.section.hero
 
+	include ../sections/header
+
 	.container-hero
-		include ../sections/header
 					
 		.hero__title
 			img(src="assets/img/decor/portfolio_header.svg" alt="portfolio_header").section-title
 			
 			include ../sections/user
 
-		a(href="#").arrow-down
-			svg.icons.icon__arrow-down
-				use(xlink:href='assets/img/sprite.svg#arrow_down')
+	a(href="#").arrow-down
+		svg.icons.icon__arrow-down
+			use(xlink:href='assets/img/sprite.svg#arrow_down')

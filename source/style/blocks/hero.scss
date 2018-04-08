@@ -1,23 +1,44 @@
 .hero {
-	height: 600px;
+	//height: 600px;
+	height: 100vh;
 	overflow: hidden;
 	position: relative;
 	color: $white;
 	background: url(../img/bg/bg-mountain-mask.jpg);
-	background-size: cover;
-    min-height: 100%;
+	background-size: 115% 205%;
+    background-position: top center;
+    //min-height: 100%;
     width: 100%;
+
+    @include desktop {
+    	background-size: 165% 205%;
+    }
+
+    @include laptop {
+    	background-size: 190% 205%;
+    }
+
+    @include tablets {
+    	background-size: 240% 175%;
+    }
+
+    @include phones {
+    	background-size: 300% 120%;
+    }
 }
 
 .container-hero {
-	position: relative;
+	//position: relative;
+	@include centered();
+	width: 100%;
+	top: 45%;
 }
 
 //header
 
 
 .hero__title {
-	margin-top: 80px;
+	//margin-top: 80px;
 	position: relative;
 }
 
@@ -30,16 +51,22 @@
 
 //user
 
-
+//arrow-down
 .arrow-down {
 	display: block;
-    margin-top: 130px;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    bottom: 70px;
+	left: calc(50% - 15px);
+	z-index: 1;
 }
 
 .icon__arrow-down {
 	@include centered(x);
 	position: relative;
 	fill: $lightBlue;
+	cursor: pointer;
 
 	&:hover {
 		fill: $white;

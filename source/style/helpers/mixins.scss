@@ -27,18 +27,22 @@
 }
 
 %titleDecor {
-  &::before, &::after {
-      content: "—";
-      color: #c3c4c0;
-    }
+  &:after, &:before {
+    content: "";
+    display: block;
+    @include centered(y);
+    background-color: #c3c4c0;
+    width: 22px;
+    height: 5px;
+  }
 
-    &::before {
-      margin-right: 20px;
-    }
+  &:after {
+    right: 40px;
+  }
 
-    &::after {
-      margin-left: 20px;
-    }
+  &:before {
+    left: 40px;
+  }
 }
 
 
@@ -50,6 +54,12 @@
 
 @mixin laptop() {
   @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin screen900() {
+  @media screen and (max-width: 900px) {
     @content;
   }
 }

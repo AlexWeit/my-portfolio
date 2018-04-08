@@ -4,6 +4,8 @@ block title
 	| Мои работы
 
 block content
+	include ../sections/main-menu
+
 	include ../sections/hero
 
 	section.section.works
@@ -22,18 +24,19 @@ block content
 					polygon(points="0,100 1000,100 1000,0")
 
 		.works__my-works
-			+title('Мои работы', 'works_header.svg', 'my-works__title')
+			+title('Мои работы', 'works_header.svg', 'my-works__title', 'my-works__title_text')
 
 			include ../sections/slider
 
 		.works__about-me
-			+title('Что обо мне говорят', 'about_header.svg', 'about-me__title')
+			+title('Что обо мне говорят', 'about_header.svg', 'about-me__title', 'about-me__title_text')
 
 			.works__reviews
 				.works__review
-					i(class="fa fa-quote-left fa-2x" aria-hidden="true")
+					.review__icon
+						i(class="fa fa-quote-left fa-2x" aria-hidden="true")
 					.review__text
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi veniam debitis ipsa aliquam animi accusantium asperiores labore libero quod rerum corporis doloremque, eius similique natus quos officiis soluta repudiandae nulla?
+						| Эта девушка проходила обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
 					.review__autor_container
 						.review__autor__pic
 							img.review__autor__pic_dima(src="assets/img/content/dmitriy.png", alt="dmitriy")
@@ -41,9 +44,10 @@ block content
 							.autor__name Дмитрий Ковальчук
 							.autor__desc основатель Loftschool
 				.works__review
-					i(class="fa fa-quote-left fa-2x" aria-hidden="true")
+					.review__icon
+						i(class="fa fa-quote-left fa-2x" aria-hidden="true")
 					.review__text
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi veniam debitis ipsa aliquam animi accusantium asperiores labore libero quod rerum corporis doloremque, eius similique natus quos officiis soluta repudiandae nulla?
+						| Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
 					.review__autor_container
 						.review__autor__pic
 							img.review__autor__pic_vova(src="assets/img/content/vladimir.png", alt="vladimir")
@@ -54,9 +58,10 @@ block content
 			section.works__form
 				include ../sections/works_form
 
-			a(href='#').works__page-up
-				svg.icons.works__page-up_icon(viewBox="0 0 10 10" preserveAspectRatio='none')
-					use(xlink:href='assets/img/sprite.svg#arrow_up')
+			.works__page-up-container
+				a(href='#').works__page-up_link
+					svg.icons.works__page-up_icon(viewBox="0 0 10 10" preserveAspectRatio='none')
+						use(xlink:href='assets/img/sprite.svg#arrow_up')
 
 block footer
 	include ../sections/footer

@@ -1,27 +1,42 @@
+.hero-blog {
+	//max-height: 395px;
+    background-position: top center;
+}
+.container-hero-blog {
+	top: 50%;
+}
+
+.hero__title_blog {
+	margin-top: 0;
+
+	@include phones {
+		margin-top: 15px;
+	}
+}
+
 .user__blog-title {
 	position: relative;
+	text-align: center;
 }
 
 .user__blog-title_bg {
-	opacity: 0.1;
 	@include centered();
-	top: 77%;
-	left: 51%;
-	width: 330px;
-
 }
 
 .blog__section-title {
-	text-align: center;
-	font-size: 63px;
-	font-family: "bernier_regularregular";
 	color: $white;
-	@extend %titleDecor;
+	text-transform: uppercase;
+	
+	padding: 15px 70px;
+	margin-top: 15px;
 
-	&::before, &::after {
-      color: $white;
-      opacity: 0.3;
-    }
+	@include phones {
+		margin-top: 0;
+	}
+
+	&:after,&:before {
+		background-color: rgba(255,255,255,0.3);
+	}
 }
 
 .user__blog-subtitle {

@@ -1,10 +1,10 @@
-section.section.hero
+section.section.hero.hero-blog
 
-	.container-hero
-		include ../sections/header
+	include ../sections/header
+
+	.container-hero.container-hero-blog
 					
-		.hero__title
-			//img(src="assets/img/decor/portfolio_header.svg" alt="portfolio_header").section-title
+		.hero__title.hero__title_blog
 			
 			.user.hero__user-block
 				.user__photo
@@ -12,9 +12,8 @@ section.section.hero
 						img(src="assets/img/content/user.png", alt="user-avatar").user__photo-img
 				.user__blog-title
 					img(src="assets/img/decor/blog_header.svg" alt="portfolio_header").user__blog-title_bg
-					.title.blog__section-title Блог
-				.user__blog-subtitle Статьи, которые я написала
 
-		//a(href="#").arrow-down
-			svg.icons.icon__arrow-down
-				use(xlink:href='assets/img/sprite.svg#arrow_down')
+					.title.blog__section-title
+						h2.title-text.blog__section-title_text Блог
+					
+				.user__blog-subtitle Статьи, которые я написала

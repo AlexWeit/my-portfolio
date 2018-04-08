@@ -1,0 +1,8 @@
+.navigation
+	nav.main-menu
+		ul.main-menu__list
+			-
+				pages = [{name:'Мои работы', link:'works'}, {name:'Обо мне', link:'about'}, {name:'Блог', link:'blog'}, {name:'Авторизация', link:'index'}];
+			each page in pages
+				li.main-menu__item
+					a(href=`${page.link}.html`).main-menu__link= page.name

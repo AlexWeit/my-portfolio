@@ -1,13 +1,15 @@
 header.container_header
 	ul.socials.socials_header
 		-
-			icons = ['vk', 'gh', 'in'];
+			icons = [{name:'vk', link:'https://vk.com/wunya'}, {name:'gh', link:'https://github.com/AlexWeit'}, {name:'in', link:'https://linkedin.com/'}]
 		each icon in icons
 			li.socials__item
-				a(href="#").socials__link
+				a(href=`${icon.link}` target='_blank').socials__link
 					svg.icons.icons__socials.icons__socials_white
-						use(xlink:href=`assets/img/sprite.svg#${icon}`)
-		
+						use(xlink:href=`assets/img/sprite.svg#${icon.name}`)
+			
 	a(href="#").hamburger
 		svg.icons.icon__hamburger
 			use(xlink:href='assets/img/sprite.svg#hamburger')
+
+
