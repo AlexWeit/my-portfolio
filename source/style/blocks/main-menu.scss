@@ -23,7 +23,7 @@
 	    bottom: 0;
 	    content: '';
 	    height: 100%;
-	    transition: all 0.3s ease-out;
+	    transition: all 0.3s ease-in;
 	    z-index: -1;
 	}
 
@@ -60,10 +60,6 @@
 .main-menu-active {
 	opacity: 1;
 	z-index: 120;
-}
-
-.main-menu__list {
-	
 }
 
 .main-menu__item {
