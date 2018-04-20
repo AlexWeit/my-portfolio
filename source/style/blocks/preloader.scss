@@ -45,7 +45,6 @@
 	&:after {
 		$marginSpinnerAfter: 7px;
 
-		border-top-color: blue;
 		top: $marginSpinnerAfter;
 		bottom: $marginSpinnerAfter;
 		left: $marginSpinnerAfter;
@@ -57,7 +56,6 @@
 	&:before {
 		$marginSpinnerBefore: 16px;
 
-		border-top-color: red;
 		top: $marginSpinnerBefore;
 		bottom: $marginSpinnerBefore;
 		left: $marginSpinnerBefore;
