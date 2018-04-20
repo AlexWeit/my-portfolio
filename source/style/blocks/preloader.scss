@@ -1,0 +1,75 @@
+.body-preload {
+	overflow: hidden;
+}
+
+.preloader {
+	position: absolute;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999999;
+	background-color: rgba(0, 191, 165, 0.87);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.preloader__spinner {
+	height: 150px;
+	width: 150px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.preloader__animation {
+	width: 100%;
+	height: 100%;
+
+	animation: spin 5s linear infinite;
+
+	&, &:before, &:after {
+		border: 2px solid transparent;
+		border-radius: 50%;
+		border-top-color: $white;
+		content: "";
+		position: absolute;
+		display: block;
+	}
+
+
+	&:after {
+		$marginSpinnerAfter: 7px;
+
+		border-top-color: blue;
+		top: $marginSpinnerAfter;
+		bottom: $marginSpinnerAfter;
+		left: $marginSpinnerAfter;
+		right: $marginSpinnerAfter;
+
+		animation: spin 3s linear infinite;
+	}
+
+	&:before {
+		$marginSpinnerBefore: 16px;
+
+		border-top-color: red;
+		top: $marginSpinnerBefore;
+		bottom: $marginSpinnerBefore;
+		left: $marginSpinnerBefore;
+		right: $marginSpinnerBefore;
+
+		animation: spin 7s linear infinite;
+
+	}
+
+}
+
+.preloader__percents {
+	position: absolute;
+	color: $white;
+}
