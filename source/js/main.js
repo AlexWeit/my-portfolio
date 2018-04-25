@@ -10,4 +10,8 @@ $(document).ready(function() {
 	if ($('.arrow-down').length) {
 		Test.init();
 	}
+
+	if ($('#works__slider').length) {
+		Slider.init();
+	}
 });
