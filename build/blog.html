@@ -66,7 +66,7 @@
           </div>
         </div>
       </section>
-      <main class="blog">
+      <main class="blog" id="blog">
         <div class="section__triangles">
           <div class="triangle-container_left">
             <svg class="triangle triangle_left triangle_fill_white-blog" viewbox="0 0 1000 100" preserveAspectRatio="none">
@@ -80,29 +80,55 @@
           </div>
         </div>
         <aside class="blog__sidebar">
-          <ul class="sidebar__list">
-            <li class="sidebar__item sidebar__item_active"><a class="sidebar__link sidebar__link_active" href="#">Самое важное в SASS</a></li>
-            <li class="sidebar__item"> <a class="sidebar__link" href="#">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
-            <li class="sidebar__item"> <a class="sidebar__link" href="#">Самый необходимый набор Gulp плагинов</a></li>
-            <li class="sidebar__item"> <a class="sidebar__link" href="#">Почему я выбрал Pug</a></li>
-          </ul>
+          <div class="sidebar__container">
+            <ul class="sidebar__list">
+              <li class="sidebar__item"><a class="sidebar__link sidebar__link_active" href="#">Самое важное в SASS</a></li>
+              <li class="sidebar__item"> <a class="sidebar__link" href="#">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
+              <li class="sidebar__item"> <a class="sidebar__link" href="#">Самый необходимый набор Gulp плагинов</a></li>
+              <li class="sidebar__item"> <a class="sidebar__link" href="#">Почему я выбрал Pug</a></li>
+            </ul>
+          </div>
         </aside>
         <section class="blog__articles">
-          <article class="article">
+          <article class="article article_active">
             <h3 class="article__title">Самое важное в SASS</h3>
             <h3 class="article__date">22 ноября 2016</h3>
             <h3 class="article__text"> 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempora accusantium delectus maxime eligendi magnam mollitia ipsum facilis, explicabo, deserunt tenetur, est architecto laboriosam nostrum impedit dolorem sed assumenda quo.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempora accusantium delectus maxime eligendi magnam mollitia ipsum facilis, explicabo, deserunt tenetur, est architecto laboriosam nostrum impedit dolorem sed assumenda quo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempora accusantium delectus maxime eligendi magnam mollitia ipsum facilis, explicabo, deserunt tenetur, est architecto laboriosam nostrum impedit dolorem sed assumenda quo.</p>
             </h3>
           </article>
           <article class="article">
             <h1 class="article__title">Приёмы в вёрстке, без которых не обходится ни один сайт</h1>
             <div class="article__date">13 ноября 2016</div>
             <div class="article__text"> 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempora accusantium delectus maxime eligendi magnam mollitia ipsum facilis, explicabo, deserunt tenetur, est architecto laboriosam nostrum impedit dolorem sed assumenda quo.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempora accusantium delectus maxime eligendi magnam mollitia ipsum facilis, explicabo, deserunt tenetur, est architecto laboriosam nostrum impedit dolorem sed assumenda quo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempora accusantium delectus maxime eligendi magnam mollitia ipsum facilis, explicabo, deserunt tenetur, est architecto laboriosam nostrum impedit dolorem sed assumenda quo.</p>
+            </div>
+          </article>
+          <article class="article">
+            <h1 class="article__title">Самый необходимый набор Gulp плагинов</h1>
+            <div class="article__date">25 ноября 2016</div>
+            <div class="article__text"> 
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempora accusantium delectus maxime eligendi magnam mollitia ipsum facilis, explicabo, deserunt tenetur, est architecto laboriosam nostrum impedit dolorem sed assumenda quo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempora accusantium delectus maxime eligendi magnam mollitia ipsum facilis, explicabo, deserunt tenetur, est architecto laboriosam nostrum impedit dolorem sed assumenda quo.</p>
+            </div>
+          </article>
+          <article class="article">
+            <h1 class="article__title">Почему я выбрал Pug</h1>
+            <div class="article__date">28 ноября 2016</div>
+            <div class="article__text"> 
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempora accusantium delectus maxime eligendi magnam mollitia ipsum facilis, explicabo, deserunt tenetur, est architecto laboriosam nostrum impedit dolorem sed assumenda quo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempora accusantium delectus maxime eligendi magnam mollitia ipsum facilis, explicabo, deserunt tenetur, est architecto laboriosam nostrum impedit dolorem sed assumenda quo.</p>
             </div>
           </article>
         </section>
+        <aside class="blog__sidebar_tablet blog__sidebar_tablet_closed"><a class="sidebar__disk_tablet"></a>
+          <div class="sidebar__container_tablet">
+            <ul class="sidebar__list">
+              <li class="sidebar__item"><a class="sidebar__link sidebar__link_active" href="#">Самое важное в SASS</a></li>
+              <li class="sidebar__item"> <a class="sidebar__link" href="#">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
+              <li class="sidebar__item"> <a class="sidebar__link" href="#">Самый необходимый набор Gulp плагинов</a></li>
+              <li class="sidebar__item"> <a class="sidebar__link" href="#">Почему я выбрал Pug</a></li>
+            </ul>
+          </div>
+        </aside>
       </main>
       <footer class="footer">
         <div class="footer__row footer__row_top">

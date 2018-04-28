@@ -15,7 +15,7 @@ var Slider = (function() {
 		link = sliderContainer.find('.slider__info__btn'),
 		duration = 500,
 		isAnimate = false,
-		counter = 0; 
+		counter = 0;
 
 	var _Defaults = function() {
 		// left btn
@@ -172,7 +172,7 @@ var Slider = (function() {
 				e.preventDefault();
 
 				_moveSlide('next');
-			})
+			});
 		}
 	}
 })();

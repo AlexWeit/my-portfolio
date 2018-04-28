@@ -14,4 +14,8 @@ $(document).ready(function() {
 	if ($('#works__slider').length) {
 		Slider.init();
 	}
+
+	if ($('#blog').length) {
+		BlogMenu.init();
+	}
 });
