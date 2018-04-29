@@ -19,6 +19,10 @@
 	&_bottom {
 		font-family: "robotolight";
 	}
+
+	@include phones {
+		padding: 0 15px;
+	}
 }
 
 .footer__left, .footer__right {
@@ -45,11 +49,25 @@
 	}
 }
 
+.nav-menu {
+
+	@include phones {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+
 .nav-menu__item {
 	display: inline-block;
 	margin-left: 40px;
 
 	&:first-child {
+		margin-left: 0;
+	}
+
+	@include phones {
+		display: block;
 		margin-left: 0;
 	}
 }

@@ -2,30 +2,40 @@
 
 var BlogMenu = (function() {
 	
-	var sidebar = $('.sidebar__container'),
-		sidebarTablet = $('.sidebar__container_tablet'),
+	var sidebarContainer = $('.sidebar__container'),
+		sidebarTabletContainer = $('.sidebar__container_tablet'),
 		articles = $('.article'),
 		body = document.body,
 		articlePositionsArray = []; //пустой массив для координат статей
 
 
-	var _FixedMenu = function(elementTop) {
+	var _FixedMenu = function() {
 
-		sidebar.addClass('fixed');
-		sidebarTablet.addClass('fixed');
+		/*
+		sidebarContainer.addClass('fixed');
+		sidebarTabletContainer.addClass('fixed');
 		
 		var	scrollTop = $(window).scrollTop(),
 			menuTopPosition = Math.max(15, elementTop - scrollTop); //вернет наибольшее
 
-		sidebar.css('top', menuTopPosition);
-		sidebarTablet.css('top', menuTopPosition);
+		sidebarContainer.css('top', menuTopPosition);
+		sidebarTabletContainer.css('top', menuTopPosition);
+		*/
+
+		var	scrollTop = $(window).scrollTop();
+
+        if (scrollTop < $('.article').offset().top) {
+            sidebarContainer.removeClass('fixed');
+        } else {
+            sidebarContainer.addClass('fixed');
+        }
 	};
 
 	var _FillArticlePositionsArray = function() { // наполняем пустой массив объектами со свойствами (позициями статей)
 
 		for (var i = 0; i < articles.length; i++) {
 			articlePositionsArray[i] = {}; // каждый элемент массива делаем объектом
-            articlePositionsArray[i].top = articles.eq(i).offset().top - 100; // свойство объекта
+            articlePositionsArray[i].top = articles.eq(i).offset().top - 150; // свойство объекта
             articlePositionsArray[i].bottom = articlePositionsArray[i].top + articles.eq(i).innerHeight(); // свойство объекта
 		}		
 	};
@@ -81,12 +91,8 @@ var BlogMenu = (function() {
 	return {
 		init: function() {
 
-			var sidebarOffsetTop = sidebar.offset().top; // топ-координата относительно начала страницы
-			var sidebarTabletOffsetTop = sidebarTablet.offset().top;
-
 			$(window).scroll(function() {
-				_FixedMenu(sidebarOffsetTop);
-				_FixedMenu(sidebarTabletOffsetTop);			
+				_FixedMenu();			
 			});
 
 			$(window).scroll(function() {

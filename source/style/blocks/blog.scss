@@ -112,8 +112,13 @@
 
 .fixed {
 	position: fixed;
-	top: 60px;
+	top: 15px;
 	width: inherit;
+}
+
+.sidebar__container_tablet {
+	@include centered(y);
+	position: relative;
 }
 
 .sidebar__disk_tablet {
@@ -163,15 +168,12 @@
 			font-weight: bold;
 		}
 	}
-
-	
-
 }
 
 
 //article
 .article {
-	margin-bottom: 130px;
+	margin-bottom: 30px;
 }
 
 .article__title {
@@ -182,4 +184,20 @@
 .article__date {
 	color: $green;
 	padding: 20px 0;
+}
+
+.empty {
+	min-height: 147px;
+
+	@include screen900 {
+		min-height: 230px;
+	}
+
+	@include tablets {
+		min-height: 250px;
+	}
+
+	@include phones {
+		min-height: 300px;
+	}
 }
