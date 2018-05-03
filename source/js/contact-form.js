@@ -35,7 +35,7 @@ var ContactForm = (function() {
 
 		    } else {
 		    	$.ajax({
-					url: 'handler.php',
+					url: '/php/contact-form.php',
 					method: 'post',
 					data: {
 						name: nameValue,
