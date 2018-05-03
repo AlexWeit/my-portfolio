@@ -15,6 +15,10 @@ $(document).ready(function() {
 		Slider.init();
 	}
 
+	if($('.works__form').length) {
+		ContactForm.init();
+	}
+
 	if ($('#blog').length) {
 		BlogMenu.init();
 	}

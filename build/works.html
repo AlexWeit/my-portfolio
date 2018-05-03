@@ -152,17 +152,21 @@
           </div>
           <section class="works__form">
             <div class="contact-form">
-              <div class="contact-form__subtitle subtitle"> 
+              <div class="popup">
+                <div class="popup_close"></div>
+                <div class="popup_text"></div>
+              </div>
+              <div class="contact-form__subtitle subtitle">
                 <h3 class="subtitle_text">Связаться со мной</h3>
               </div>
-              <form class="contact-form__input-group">
-                <input class="contact-form__input" type="text" placeholder="Имя" name="name">
-                <input class="contact-form__input" type="email" placeholder="Email" name="email">
-                <textarea class="contact-form__input" placeholder="Ваше сообщение" name="message"></textarea>
+              <form class="contact-form__input-group" action="assets/php/contact-form.php" method="POST" name="contact-form">
+                <input class="contact-form__input" id="contact-form__input__name" type="text" placeholder="Имя" name="name" required>
+                <input class="contact-form__input" id="contact-form__input__email" type="email" placeholder="Email" name="email" required>
+                <textarea class="contact-form__input" id="contact-form__input__message" placeholder="Ваше сообщение" name="message" required></textarea>
               </form>
               <div class="contact-form__btn-container">
                 <button class="contact-form__btn btn_submit" type="submit">Отправить</button>
-                <button class="contact-form__btn btn_submit" type="reset">Очистить</button>
+                <button class="contact-form__btn btn_reset" type="reset">Очистить</button>
               </div>
             </div>
           </section>
@@ -204,7 +208,7 @@
             <div class="footer__about">Я веб-разработчик из Москвы, и этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool.</div>
           </div>
           <div class="footer__right">
-            <div class="footer__about-user-name">© Александра Вейт | создано с любовью в LoftSchool | 2017</div>
+            <div class="footer__about-user-name">© Александра Вейт | создано с любовью в LoftSchool | 2018</div>
           </div>
         </div>
       </footer>

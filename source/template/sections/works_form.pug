@@ -1,11 +1,14 @@
 .contact-form
-	.contact-form__subtitle.subtitle 
+	.popup
+		.popup_close
+		.popup_text
+	.contact-form__subtitle.subtitle
 		h3.subtitle_text Связаться со мной
-	form.contact-form__input-group
-		input(type='text' placeholder='Имя' name='name').contact-form__input
-		input(type='email' placeholder='Email' name='email').contact-form__input
-		textarea(placeholder='Ваше сообщение' name='message').contact-form__input
+	form(class='contact-form__input-group' action='assets/php/contact-form.php' method='POST' name='contact-form')
+		input(class='contact-form__input' id='contact-form__input__name' type='text' placeholder='Имя' name='name' required)
+		input(class='contact-form__input' id='contact-form__input__email' type='email' placeholder='Email' name='email' required)
+		textarea(class='contact-form__input' id='contact-form__input__message' placeholder='Ваше сообщение' name='message' required)
 
 	.contact-form__btn-container
 		button(type='submit').contact-form__btn.btn_submit Отправить
-		button(type='reset').contact-form__btn.btn_submit Очистить
+		button(type='reset').contact-form__btn.btn_reset Очистить

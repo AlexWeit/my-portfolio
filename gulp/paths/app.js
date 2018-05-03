@@ -5,6 +5,7 @@ module.exports = [
   './source/js/preloader.js',
   './source/js/main-menu.js',
   './source/js/slider.js',
+  './source/js/contact-form.js',
   './source/js/blog-menu.js',
   './source/js/main.js'
 ];
