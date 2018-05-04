@@ -3,7 +3,7 @@
 if($_POST)
 {
 	$to_email = "alexandra.pasyuta@gmail.com"; //Recipient email, Replace with own email here
-	$subject = "***Получено с сайта MY-PORTFOLIO***";
+	$subject = "***Получено с сайта ALEXWEIT.TMWEB.RU***";
 	
 	//check if its an ajax request, exit if not
     if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {

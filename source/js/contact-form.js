@@ -32,10 +32,13 @@ var ContactForm = (function() {
 		        inputEmail.css('border-color', 'red');
 		        popUpText.html('E-mail введён неверно!');
 		        popUp.addClass('popup_active');
+		        setInterval(function() {
+					popUp.removeClass('popup_active');
+				}, 10000);
 
 		    } else {
 		    	$.ajax({
-					url: '/php/contact-form.php',
+					url: '../assets/php/contact-form.php',
 					method: 'post',
 					data: {
 						name: nameValue,
@@ -46,13 +49,27 @@ var ContactForm = (function() {
 					console.log('done');
 					popUpText.html('Сообщение отправлено!');
 					popUp.addClass('popup_active');
+					_reset();
+					setInterval(function() {
+						popUp.removeClass('popup_active');
+					}, 10000);
 				}).fail(function(error) {
 					console.log('error');
 					popUpText.html('Произошла ошибка!');
 					popUp.addClass('popup_active');
+					setInterval(function() {
+						popUp.removeClass('popup_active');
+					}, 10000);
 				});	
 		    }
 		}		
+	};
+
+	var _reset = function() {
+		inputName.val('');
+		inputEmail.val('');
+		inputMessage.val('');
+		popUp.removeClass('popup_active');
 	};
 
 	return {
@@ -60,24 +77,20 @@ var ContactForm = (function() {
 			$('.btn_submit').on('click', function(e) {
 				e.preventDefault();
 
-				console.log('clicked');
-
 				_clickSubmit();
-
 			});
 
 			$('.popup').on('click', function() {
-				console.log('popup clicked');
+
 	        	popUp.removeClass('popup_active');
-	        	$('.input_reset').val('');
+
+	        	_reset();
 			});
 
 			$('.btn_reset').on('click', function(e) {
 				e.preventDefault();
 
-				console.log('reset');
-
-				$('.input_reset').val('');
+				_reset();
 			})
 		}
 	}
