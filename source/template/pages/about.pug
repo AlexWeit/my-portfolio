@@ -38,7 +38,7 @@ block content
 							| Кто я
 					.user-about__text
 						p 
-							| Я веб разработчик из Москвы. Мне 28 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+							| Я веб-разработчик из Москвы. Мне 28 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
 						p
 							| Этот сайт я сделала в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво.
 			
@@ -50,7 +50,7 @@ block content
 								| Чем я могу быть вам полезна
 						.about-user-info__text
 							p
-								| Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+								| Больше всего меня привлекает Frontend разработка, но я также знакома и могу решать не сложные задачи на Backend. Но давайте по порядку.
 					.about-data__content
 						ul.skills-group
 							each skillGroup in ['Frontend', 'Backend', 'WorkFlow']
@@ -64,8 +64,8 @@ block content
 														svg(viewbox="0 0 100 100" preserveAspectRatio="none").skill__circle
 															circle(cx="50" cy="50" r="40").skills__circle-under
 															circle(cx="50" cy="50" r="40").skills__circle-above
-														- var skillsFrontend = ['HTML5', 'CSS3', 'JavaScript & jQuery']
-														- var skillsBackend = ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db']
+														- var skillsFrontend = ['HTML5', 'CSS3', 'JavaScript', 'jQuery']
+														- var skillsBackend = ['PHP', 'Node.js', 'npm']
 														- var skillsWorkflow = ['Git', 'Gulp', 'Bower']
 														if skillGroup=='Frontend'
 															.skill__title=skillsFrontend[i]

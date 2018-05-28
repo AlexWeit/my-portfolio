@@ -28,9 +28,10 @@
 }
 
 //delete circle
+
 .skills-group__item {
 
-	&:first-child {
+	&:nth-child(2) {
 		
 		.skills-list__item:last-child {
 			display: none;
